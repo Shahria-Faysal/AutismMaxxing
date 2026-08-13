@@ -14,13 +14,13 @@ const QUESTIONS = [
   {
     id: 'clash',
     text: 'You play Clash Royale? 👑',
-    roast: "Please reconsider your life choices, bestie.",
+    roast: "Please reconsider your life choices.",
     emoji: '🤡',
   },
   {
     id: 'frass',
     text: "You're friends with Frass? 🤝",
-    roast: "Certified sigma. Respect.",
+    roast: "At least you're friends with the Goat",
     emoji: '😎',
   },
 ]
