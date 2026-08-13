@@ -1,10 +1,6 @@
 /* src/index.css — Global styles + Tailwind v4 import */
 @import "tailwindcss";
 
-/* ── Google Fonts ─────────────────────────────────────────────────────────── */
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;1,400;1,600&family=Manrope:wght@400;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
-
 /* ── Tailwind theme tokens (mirrors the HTML) ─────────────────────────────── */
 @theme {
   --color-primary:                    #1c667e;
@@ -88,7 +84,7 @@ h1, h2, h3, .font-headline {
 }
 
 /* ── AQ radio: selected state ─────────────────────────────────────────────── */
-.aq-option input:checked ~ .aq-label {
+.aq-option input:checked + div {
   background-color: var(--color-secondary);
   color: white;
   border-color: var(--color-secondary);

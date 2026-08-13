@@ -42,11 +42,9 @@ const AQ_KEYS = [
 export default function ScreeningScreen() {
   const navigate = useNavigate()
   const [form, setForm] = useState<PredictRequest>(DEFAULT_FORM)
+  const [fullName, setFullName] = useState('Zakt')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
-
-  // Fixed name — the easter egg check
-  const NAME = 'Zakt'
 
   const setAQ = (index: number, val: AQScore) => {
     setForm(prev => ({ ...prev, [AQ_KEYS[index]]: val }))
@@ -66,7 +64,7 @@ export default function ScreeningScreen() {
         throw new Error(detail.detail ?? 'Prediction failed')
       }
       const data: PredictResponse = await res.json()
-      navigate('/results', { state: { result: data, name: NAME } })
+      navigate('/results', { state: { result: data, name: fullName } })
     } catch (err: unknown) {
       setError(err instanceof Error ? err.message : 'Unknown error')
     } finally {
@@ -157,7 +155,7 @@ export default function ScreeningScreen() {
             <div className="question-card bg-[--color-surface] p-6 rounded-xl space-y-4 fade-in-up">
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                {/* Full Name — read-only, always "Zakt" */}
+                {/* Full Name */}
                 <div className="flex flex-col gap-1 sm:col-span-2">
                   <label className="text-sm font-semibold text-[--color-on-surface-variant]" htmlFor="full-name">
                     Full Name
@@ -165,10 +163,10 @@ export default function ScreeningScreen() {
                   <input
                     id="full-name"
                     type="text"
-                    value={NAME}
-                    readOnly
-                    aria-label="Full name (read-only)"
-                    className="w-full px-4 py-3 rounded-lg border border-[--color-outline-variant] bg-[--color-surface-container-high] text-[--color-on-surface] text-base cursor-not-allowed opacity-80"
+                    value={fullName}
+                    onChange={e => setFullName(e.target.value)}
+                    aria-label="Full name"
+                    className="w-full px-4 py-3 rounded-lg border border-[--color-outline-variant] bg-[--color-surface-container-lowest] focus:ring-2 focus:ring-[--color-primary-fixed] focus:border-[--color-primary] text-[--color-on-surface] text-base transition-shadow outline-none"
                   />
                 </div>
 

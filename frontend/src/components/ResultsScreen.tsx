@@ -81,10 +81,10 @@ export default function ResultsScreen() {
               {result.message}
             </p>
 
-            {/* Easter egg: only shown when name is "Zakt" */}
+            {/* Easter egg: only shown when name is "Zakt" (case-insensitive) */}
             {isZakt && (
               <p className="text-base font-semibold text-[--color-primary] italic mt-3 border-l-4 border-[--color-secondary] pl-4">
-                ✨ You're great regardless.
+                zakt is great regardless
               </p>
             )}
           </div>
