@@ -27,12 +27,6 @@ export default function Header() {
             >
               Screening
             </button>
-            <button
-              onClick={() => navigate('/results')}
-              className="text-sm font-semibold text-[--color-on-surface-variant] hover:text-[--color-primary] transition-colors bg-transparent border-none cursor-pointer"
-            >
-              Results
-            </button>
           </nav>
           <button
             aria-label="Help"
