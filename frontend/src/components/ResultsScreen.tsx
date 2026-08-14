@@ -84,7 +84,7 @@ export default function ResultsScreen() {
             {/* Easter egg: only shown when name is "Zakt" (case-insensitive) */}
             {isZakt && (
               <p className="text-base font-semibold text-[--color-primary] italic mt-3 border-l-4 border-[--color-secondary] pl-4">
-                zakt is great regardless
+                zakt is Retarded regardless
               </p>
             )}
           </div>
@@ -115,7 +115,7 @@ export default function ResultsScreen() {
             <button
               onClick={() => window.print()}
               aria-label="Download or print report"
-              className="bg-[--color-primary] text-white font-semibold text-sm px-6 py-3 rounded-lg hover:bg-[--color-primary]/90 transition-all duration-200 flex items-center justify-center gap-2 shadow-sm hover:scale-105 active:scale-95"
+              className="bg-[#1c667e] text-white font-semibold text-sm px-6 py-3 rounded-lg hover:bg-[--color-primary]/90 transition-all duration-200 flex items-center justify-center gap-2 shadow-sm hover:scale-105 active:scale-95"
             >
               <span className="material-symbols-outlined">download</span>
               Download Report
