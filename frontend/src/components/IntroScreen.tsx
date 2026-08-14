@@ -45,7 +45,7 @@ export default function IntroScreen() {
               <button
                 onClick={() => navigate('/screening')}
                 aria-label="Begin ASD Screening"
-                className="bg-[--color-primary] hover:bg-[--color-on-primary-fixed-variant] text-white font-semibold text-sm py-3 px-8 rounded-full transition-all duration-200 shadow-[0_4px_12px_rgba(90,155,181,0.2)] active:scale-95 hover:scale-105 w-full md:w-auto min-w-[240px]"
+                className="primary-button w-full md:w-auto"
               >
                 Begin Screening
               </button>

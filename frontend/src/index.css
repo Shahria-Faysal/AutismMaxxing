@@ -76,6 +76,78 @@ h1, h2, h3, .font-headline {
   font-family: var(--font-headline);
 }
 
+/* ── Shared action buttons ──────────────────────────────────────────────── */
+.primary-button,
+.secondary-button,
+.special-assessment-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  border-radius: 9999px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, opacity 0.2s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.primary-button {
+  background: var(--color-primary);
+  color: white;
+  box-shadow: 0 4px 12px rgba(28, 102, 126, 0.2);
+  padding: 0.8rem 2rem;
+  min-width: 240px;
+}
+
+.primary-button:hover {
+  background: #154c5e;
+  transform: translateY(-1px) scale(1.02);
+}
+
+.primary-button:active {
+  transform: scale(0.98);
+}
+
+.primary-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.secondary-button {
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.2);
+  padding: 0.7rem 1.5rem;
+}
+
+.secondary-button:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-1px);
+}
+
+.special-assessment-panel {
+  background: linear-gradient(135deg, rgba(88, 28, 135, 0.28), rgba(236, 72, 153, 0.12));
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  border-radius: 1rem;
+}
+
+.special-assessment-button {
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  color: white;
+  padding: 0.7rem 1.4rem;
+  box-shadow: 0 0 16px rgba(168, 85, 247, 0.45);
+}
+
+.special-assessment-button:hover {
+  background: linear-gradient(135deg, #7c3aed, #f43f5e);
+  transform: translateY(-1px) scale(1.02);
+}
+
+.special-assessment-button:active {
+  transform: scale(0.98);
+}
+
 /* ── Question card ────────────────────────────────────────────────────────── */
 .question-card {
   box-shadow: var(--shadow-level-1);
@@ -88,6 +160,56 @@ h1, h2, h3, .font-headline {
   background-color: var(--color-secondary);
   color: white;
   border-color: var(--color-secondary);
+}
+
+/* ── Toggle switch for background info ───────────────────────────────────── */
+.toggle-switch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 44px;
+  height: 24px;
+}
+
+.toggle-switch input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.toggle-switch-track {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 9999px;
+  background: var(--color-surface-container-highest);
+  transition: background-color 0.2s ease;
+}
+
+.toggle-switch-track::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  background: white;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.12);
+  transition: transform 0.2s ease;
+}
+
+.toggle-switch input:checked + .toggle-switch-track {
+  background: var(--color-primary);
+}
+
+.toggle-switch input:checked + .toggle-switch-track::after {
+  transform: translateX(20px);
 }
 
 /* ── Fade-in animation for question cards ─────────────────────────────────── */

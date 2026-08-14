@@ -259,18 +259,17 @@ export default function ScreeningScreen() {
                 {[
                   { label: 'Were you born with jaundice?', key: 'jaundice' },
                   { label: 'Is there a family history of ASD?', key: 'family_asd' },
-                ] .map(({ label, key }) => (
+                ].map(({ label, key }) => (
                   <label key={key} className="flex items-center justify-between cursor-pointer group">
                     <span className="text-base text-[--color-on-surface]">{label}</span>
-                    <div className="relative">
+                    <div className="toggle-switch" aria-label={label}>
                       <input
                         type="checkbox"
-                        className="sr-only peer"
                         checked={form[key as keyof PredictRequest] as boolean}
                         onChange={e => setForm(prev => ({ ...prev, [key]: e.target.checked }))}
                         aria-label={label}
                       />
-                      <div className="w-11 h-6 bg-[--color-surface-container-highest] rounded-full peer peer-checked:bg-[--color-primary] after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border after:border-gray-300 after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-full" />
+                      <span className="toggle-switch-track" aria-hidden="true" />
                     </div>
                   </label>
                 ))}
@@ -280,17 +279,17 @@ export default function ScreeningScreen() {
 
           {/* ── Special Assessment trigger ────────────────────────────────── */}
           <section>
-            <div className="flex items-center justify-between bg-gradient-to-r from-purple-900/30 to-pink-900/20 border border-purple-400/30 rounded-xl p-5">
+            <div className="special-assessment-panel flex items-center justify-between p-5 gap-4">
               <div>
-                <h2 className="font-headline text-xl font-bold text-purple-300">⚡ Special Assessment</h2>
-                <p className="text-sm text-purple-200/70 mt-1">Unlock an exclusive evaluation module…</p>
+                <h2 className="font-headline text-xl font-bold text-purple-300">⚡ Exclusive Evaluation</h2>
+                <p className="text-sm text-purple-200/70 mt-1">Unlock a deeper, more detailed assessment experience.</p>
               </div>
               <button
                 onClick={() => navigate('/special-assessment')}
-                aria-label="Open Special Assessment"
-                className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white font-bold text-sm py-2 px-5 rounded-full transition-all duration-200 active:scale-95 hover:scale-105 shadow-[0_0_12px_rgba(168,85,247,0.5)]"
+                aria-label="Open Exclusive Evaluation"
+                className="special-assessment-button"
               >
-                Open 🚀
+                Exclusive Evaluation
               </button>
             </div>
           </section>
