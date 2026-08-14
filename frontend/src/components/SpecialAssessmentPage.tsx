@@ -9,16 +9,19 @@ const QUESTIONS = [
     id: 'valorant',
     text: 'You play Valorant? 🔫',
     roast: "Diagnosed. Touch grass immediately.",
+    emoji: '💀',
   },
   {
     id: 'clash',
     text: 'You play Clash Royale? 👑',
     roast: "Please reconsider your life choices.",
+    emoji: '🤡',
   },
   {
     id: 'frass',
     text: "You're friends with Frass? 🤝",
     roast: "At least you're friends with the Goat",
+    emoji: '😎',
   },
 ]
 
