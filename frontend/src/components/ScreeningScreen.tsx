@@ -279,17 +279,17 @@ export default function ScreeningScreen() {
 
           {/* ── Special Assessment trigger ────────────────────────────────── */}
           <section>
-            <div className="special-assessment-panel flex items-center justify-between p-5 gap-4">
+            <div className=" flex items-center justify-between p-5 gap-4">
               <div>
-                <h2 className="font-headline text-xl font-bold text-purple-300">⚡ Exclusive Evaluation</h2>
-                <p className="text-sm text-purple-200/70 mt-1">Unlock a deeper, more detailed assessment experience.</p>
+                <h2 className="font-headline text-xl font-bold ">⚡ Special Evaluation</h2>
+                <p className="text-sm  mt-1">Unlock a deeper, more detailed assessment experience.</p>
               </div>
               <button
                 onClick={() => navigate('/special-assessment')}
-                aria-label="Open Exclusive Evaluation"
+                aria-label="Open Special Evaluation"
                 className="special-assessment-button"
               >
-                Exclusive Evaluation
+                Special Evaluation
               </button>
             </div>
           </section>
@@ -307,8 +307,8 @@ export default function ScreeningScreen() {
             <button
               onClick={handleSubmit}
               disabled={loading}
-              aria-label="See results"
-              className="bg-[--color-primary] hover:bg-[#154c5e] text-white font-semibold text-sm py-3 px-8 rounded-full shadow-[0_4px_12px_rgba(28,102,126,0.2)] transition-all duration-200 active:scale-95 hover:scale-105 flex items-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
+              aria-label="See Results"
+              className="primary-button flex items-center gap-2"
             >
               {loading ? (
                 <>

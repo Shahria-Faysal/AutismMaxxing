@@ -9,19 +9,16 @@ const QUESTIONS = [
     id: 'valorant',
     text: 'You play Valorant? 🔫',
     roast: "Diagnosed. Touch grass immediately.",
-    emoji: '💀',
   },
   {
     id: 'clash',
     text: 'You play Clash Royale? 👑',
     roast: "Please reconsider your life choices.",
-    emoji: '🤡',
   },
   {
     id: 'frass',
     text: "You're friends with Frass? 🤝",
     roast: "At least you're friends with the Goat",
-    emoji: '😎',
   },
 ]
 
@@ -143,9 +140,6 @@ export default function SpecialAssessmentPage() {
           >
             <p className="text-yellow-300 font-bold text-lg">
               Autism Score™: {Object.values(checked).filter(Boolean).length * 33}%
-            </p>
-            <p className="text-yellow-200/70 text-xs mt-1">
-              (This number means absolutely nothing. We made it up.)
             </p>
           </div>
         )}

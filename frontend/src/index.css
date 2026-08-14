@@ -133,14 +133,14 @@ h1, h2, h3, .font-headline {
 }
 
 .special-assessment-button {
-  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  background: var(--color-primary);
   color: white;
-  padding: 0.7rem 1.4rem;
-  box-shadow: 0 0 16px rgba(168, 85, 247, 0.45);
+  padding: 0.8rem 1.5rem;
+  box-shadow: 0 4px 12px rgba(28, 102, 126, 0.2);
 }
 
 .special-assessment-button:hover {
-  background: linear-gradient(135deg, #7c3aed, #f43f5e);
+  background: #154c5e;
   transform: translateY(-1px) scale(1.02);
 }
 
